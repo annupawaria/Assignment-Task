@@ -7,6 +7,8 @@ const Services = () => {
       <div className='ser'>
         Select Services
       </div>
+      <hr className='shadow-line'/>
+
 </div>
   )
 }

@@ -5,7 +5,7 @@ body {
 }
 
 .ser{
-  font-size: 44px;
+  font-size: 33px;
   /* justify-items: f; */
   margin: 13px;
   padding: 14px;
@@ -13,16 +13,61 @@ body {
   display:block;
   text-align: center;
   justify-content: center;
+  font-weight: 700;
 
 }
+hr {
+  /* border: none; */
+  height: 1px; /* Set the height of the line */
+  background-color: #dad6d6; /* Set the color of the line */
+  margin: 20px 0; /* Add some space above and below the line */
+  text-shadow: azure;
+}
+
+.shadow-line {
+  border: none;
+  height: 2px;
+  background-color: #333;
+  margin: 20px 0;
+  box-shadow: 0 2px 4px rgba(83, 80, 80, 0.2); /* Slight shadow */
+}
+
 button{
-  font-size: 22px;
+  font-size: 20px;
   border-radius: 22px  ;
   margin: 5px;
   padding: 5px;
+  /* color: black; */
+  background: transparent;
+  /* background-color: white; */
+  font-weight: 600;
+  cursor: pointer;
+  
+  
+
+  
+
+}
+button.text{
+color: black;
+
 
 }
 
+h1{
+  color: black;
+}
+p{
+  color: black;
+}
+.hp{
+  border: 2px solid rgb(235, 227, 227);
+  margin: 10px;
+  padding:20px;
+  /* align-items: center;
+  justify-content: center; */
+
+}
 /* nav {
   position: fixed;
   top: 0;
