@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+// App.js
+import React, { useState } from 'react';
+import { useInView } from 'react-intersection-observer';
+import Services from './Services';
 
-function App() {
+const App = () => {
+  const [currentSection, setCurrentSection] = useState('Service 1');
+
+  const onSectionInView = (inView, entry, section) => {
+    if (inView) {
+      setCurrentSection(section);
+    }
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Current Section: {currentSection}</h1>
+      <div>
+        <Services />
+      </div>
     </div>
   );
-}
+};
 
 export default App;
