@@ -2,57 +2,52 @@ import React, { useState } from 'react';
 import { categories } from '../utils/Name';
 
 const categoryData = {
-    "Natural Hairstyling": {
-        title: "Natural Hairstyling",
-        description: "Flexi Rod Set - 3 hrs - $125"
-    },
-    "HairCutting": {
-        title: "HairCutting",
-        description: "Precision haircut tailored to your style."
-    },"Featured":{
-        title:"Featured",
-        description:"Haircut 1 hr,30 mins - 2 hr from $90 We do not have pricing for trims. All haircuts are full services that include a wash and style; either a wash and go or a silk press. Specify with stylist upon arrival."
-    }
-
-    // Add more categories with their corresponding data
+    "Natural Hairstyling": [
+        { name: "Flexi Rod Set", duration: "3 hrs", price: "$125" },
+        { name: "Wash & Go - Curly Style", duration: "1 hr, 25 mins", price: "$60" },
+        { name: "Braid-Out", duration: "1 hr, 50 mins", price: "$125" },
+    ],
+    "Relaxer/ Texturizer/ Keratin": [
+        { name: "Keratin Treatment", duration: "2 hrs", price: "$150" },
+        { name: "Texturizer", duration: "1 hr, 30 mins", price: "$90" },
+    ],
+    // Add more categories and their items as needed
 };
 
 const Category = () => {
-    const [selectedCategory, setSelectedCategory] = useState("");
-
-    console.log("Selected Category:", selectedCategory);
-    console.log("Category Data:", categoryData[selectedCategory]);
+    const [selectedCategory, setSelectedCategory] = useState(categories[0].name); // Default to the first category
 
     return (
         <div>
-            <div>
+            {/* Category Buttons */}
+            <div style={{ marginBottom: '20px', display: 'flex', gap: '10px' }}>
                 {categories.map((category, index) => (
-                    <button 
-                        key={index} 
-                        onClick={() => {
-                            console.log("Clicked Category:", category.name);
-                            setSelectedCategory(category.name);
-                        }}
+                    <button className=''
+                        key={index}
+                        onClick={() => setSelectedCategory(category.name)}
                         style={{
-                            background: category.name === selectedCategory ? "grey" : "white",
-                            color: "black"
+                            padding: '10px 20px',
+                            cursor: 'pointer',
+                            backgroundColor: category.name === selectedCategory ? 'black' : 'grey',
+                            color: category.name === selectedCategory ? 'white' : 'black',
+                            border: 'none',
+                            borderRadius: '5px',
                         }}
                     >
-                        <span>{category.name}</span>
+                        {category.name}
                     </button>
                 ))}
             </div>
 
-            {/* Conditionally render data for the selected category */}
+            {/* Display Items for Selected Category */}
             <div>
-                {selectedCategory && categoryData[selectedCategory] ? (
-                    <div className='hp'>
-                        <h1>{categoryData[selectedCategory].title}</h1>
-                        <p>{categoryData[selectedCategory].description}</p>
+                {categoryData[selectedCategory] && categoryData[selectedCategory].map((item, idx) => (
+                    <div key={idx} style={{ padding: '10px', border: '1px solid #ccc', margin: '10px 0' }}>
+                        <h3>{item.name}</h3>
+                        <p>{item.duration}</p>
+                        <p>{item.price}</p>
                     </div>
-                ) : (
-                    <p>Please select a category to see the details.</p>
-                )}
+                ))}
             </div>
         </div>
     );
