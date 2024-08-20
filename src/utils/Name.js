@@ -7,11 +7,9 @@ export const categories = [
     { name: "Color Services"},
     { name: "FRelaxer/ Texturizer/ Keratin"},
     { name: "Treatments"},
-    { name: "Treatments"},
 
-    { name: "Treatments"},
-    { name: "Treatments"},
-    { name: "Treatments"},
+
+  
 ]
 
      export const categoryData = {
