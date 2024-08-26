@@ -5,13 +5,15 @@ import './App.css'
 
 const App = () => {
   return (
-    <div>
-     Nav
      <div>
+    <div id="dp">
+     <h1>Nav</h1>
+     <nav id="nav">
      <a href='#Home'>Home</a>
      <a href='#contact'>Contact</a>
      <a href='#about'>About</a>
      <a href='#hello'>hello</a>
+     </nav>
      </div>
      <section id="Home">
 <h1>Home</h1>
@@ -25,6 +27,7 @@ const App = () => {
      <section id="hello">
 <h1>hello</h1>
      </section>
+     
       </div>
   )
 }

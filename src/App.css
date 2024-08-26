@@ -2,61 +2,30 @@
 
 body {
   font-family: Arial, sans-serif;
+  color:white;
 }
-
-.ser {
-  font-size: 33px;
-  margin: 13px;
-  padding: 14px;
-  display: block;
-  text-align: center;
-  justify-content: center;
-  font-weight: 700;
+#dp{
+  height:'70px';
+background-color: red;
+  position:sticky;
+  top: 0;
 }
-hr {
-
-  height: 1px; 
-  background-color: #dad6d6; 
-  margin: 20px 0; 
-  text-shadow: azure;
+#Home{
+  background-color: orange;
 }
-
-.shadow-line {
-  border: none;
-  height: 2px;
-  background-color: #333;
-  margin: 20px 0;
-  box-shadow: 0 2px 4px rgba(83, 80, 80, 0.2); 
+#Home,#about,#contact,#hello{
+  height: 700px;
+  
 }
-
-button {
-  font-size: 20px;
-  border-radius: 22px;
-  margin: 5px;
-  padding: 5px;
-  /* color: black; */
-  background: transparent;
-  /* background-color: white; */
-  font-weight: 600;
-  cursor: pointer;
+#about{
+  background-color: yellow;
 }
-
-
-h1 {
-  color: black;
+#contact{
+  background-color: blue;
 }
-p {
-  color: black;
+#hello{
+  background-color: black;
 }
-
-
-/* .hp {
-  border: 2px solid rgb(235, 227, 227);
-  margin: 10px;
-  padding: 20px;
- 
-} */
-.Home{
-  height:1000;
-  background-color:'red'
+html{
+  scroll-behavior: smooth;
 }
