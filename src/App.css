@@ -10,6 +10,13 @@ background-color: red;
   position:sticky;
   top: 0;
 }
+button{
+  background-color: aqua;
+  border-radius: 22px;
+  border: 2px solid blue;;
+  margin: 4px;
+  padding: 5px;
+}
 #Home{
   background-color: orange;
 }
