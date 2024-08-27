@@ -27,6 +27,9 @@ const App = () => {
      <section id="hello">
 <h1>hello</h1>
      </section>
+     <section id="hello">
+<h1>hello</h1>
+     </section>
      
       </div>
   )
